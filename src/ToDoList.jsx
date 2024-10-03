@@ -12,7 +12,7 @@ function ToDoList(){
     function addTask(){
      const  ne = document.getElementById('task').value;
         if(ne == ""){
-            alert("please enter a task name")
+            alert("Svp!! Veuillez rentrez une tache valide")
         }else{
             setTasks(t => [...t, newTask]);
             setNewTask("");
@@ -25,7 +25,7 @@ function ToDoList(){
     function removeTask(index){
        // alert("are you sure you want to remove "+tasks[index]+ "?");
       
-       if( confirm("Are you sure you want to remove "+tasks[index]+" ?")){
+       if( confirm("Etes-vous sur de retirer  "+tasks[index]+" ?")){
         setTasks(tasks.filter((_,i) => i!==index));
        }
 
@@ -65,7 +65,7 @@ function ToDoList(){
             <h1>ToDo List</h1>
             <div>
                 <input type="text"
-                        placeholder='add a task to...'
+                        placeholder='Ajouter une tache...'
                         value={newTask}
                         id='task'
                         onChange={handleInputChange}
